@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="150" height="150" fill="#ddf74cff">
+  <!-- Respaldo -->
+  <path d="M30 15 h30 a8 8 0 0 1 8 8 v35 a8 8 0 0 1 -8 8 h-30 z" />
+  
+  <!-- Asiento -->
+  <rect x="25" y="55" width="45" height="12" rx="3" />
+  
+  <!-- Patas -->
+  <rect x="33" y="67" width="4" height="13" rx="1" />
+  <rect x="58" y="67" width="4" height="13" rx="1" />
+  
+  <!-- Reposabrazos -->
+  <rect x="25" y="50" width="45" height="3" rx="1.5" />
+</svg>
