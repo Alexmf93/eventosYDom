@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.avion-container {
+    position: relative;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Contenedor principal del avión: apila cabina, cuerpo y cola verticalmente */
+.avion-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Cabina y Cola: centradas y con margen negativo para "unirlas" al cuerpo */
+.cabina, .cola {
+    text-align: center;
+    z-index: 10;
+}
+
+.cabina {
+    margin-bottom: 5px;
+}
+
+.cola {
+    margin-top: 5px;
+}
+
+/* CUERPO HORIZONTAL: alinea las alas y los asientos en una fila */
+.cuerpo-avion-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Contenedor de los asientos: el fuselaje */
+.asientos-container {
+    background-color: #e6e6e6;
+    padding: 10px;
+    border-radius: 50px;
+    min-width: 300px;
+    z-index: 10;
+}
+
+/* Imágenes de las partes del avión: controlamos su tamaño */
+.avion-img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+/* Estilos para los asientos */
+.asientos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fila-asientos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.pasillo {
+    width: 30px;
+    height: 30px;
+}
+
+img.asiento {
+    width: 20px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+/* Estilos para la leyenda */
+.leyenda {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.leyenda-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.leyenda-img {
+    width: 20px;
+    height: 30px;
+}
+
+/* --- ESTILOS PARA LA CABECERA DE LETRAS (AÑADIR AL FINAL) --- */
+
+.cabecera-asientos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px; /* Espacio entre las letras y los asientos */
+    padding-left: 25px; /* Importante: Alinea las letras con las columnas de asientos */
+}
+
+.grupo-letras {
+    display: flex;
+}
+
+.letra-asiento {
+    width: 24px; /* Ancho del asiento (20px) + sus márgenes (2px a cada lado) */
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+}
+
+.pasillo-cabecera {
+    width: 30px; /* Mismo ancho que el pasillo de los asientos */
+}
+
+/* --- ESTILOS RESPONSIVOS PARA PANTALLAS GRANDES --- */
+
+/* Cuando la pantalla tenga 768px o más de ancho... */
+@media (min-width: 768px) {
+    
+    /* ...hacemos más grandes las imágenes de la cabina y la cola */
+    .cabina .avion-img,
+    .cola .avion-img {
+        width: 250px; /* Puedes cambiar este valor al tamaño que quieras */
+    }
+
+    /* Opcional: También podemos hacer el contenedor de asientos un poco más grande */
+    .asientos-container {
+        min-width: 350px;
+    }
+}

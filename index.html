@@ -4,13 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tema 4</title>
+    <!-- Enlace a la hoja de estilos dentro de la carpeta css -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <div class="asientos" id="asientos">
-    <div id="asientos" style="text-align: center;"></div>
-
-
+    <h1>Mapa de Asientos de Avión</h1>
+    
+    <div class="avion-container">
+        <div class="avion-wrapper">
+            <!-- Cabina del avión -->
+            <div class="cabina">
+                <img src="img/cabezaAvion.jpg" alt="Cabina del avión" class="avion-img">
+            </div>
+            
+            <!-- Cabecera con las letras de los asientos -->
+            <div class="cabecera-asientos">
+                <div class="grupo-letras">
+                    <div class="letra-asiento">A</div>
+                    <div class="letra-asiento">B</div>
+                    <div class="letra-asiento">C</div>
+                </div>
+                <div class="pasillo-cabecera"></div>
+                <div class="grupo-letras">
+                    <div class="letra-asiento">D</div>
+                    <div class="letra-asiento">E</div>
+                    <div class="letra-asiento">F</div>
+                </div>
+            </div>
+            
+            <!-- CUERPO HORIZONTAL DEL AVIÓN -->
+            <div class="cuerpo-avion-horizontal">
+                <!-- Ala izquierda -->
+                <div class="ala-izquierda">
+                    <img src="img/alaIzquierda.jpg" alt="Ala izquierda del avión" class="avion-img">
+                </div>
+                
+                <!-- Contenedor de asientos (EL CENTRO) -->
+                <div class="asientos-container">
+                    <!-- Este es el div donde se generarán los asientos con JavaScript -->
+                    <div id="asientos" class="asientos"></div>
+                </div>
+                
+                <!-- Ala derecha -->
+                <div class="ala-derecha">
+                    <img src="img/alaDerecha.jpg" alt="Ala derecha del avión" class="avion-img">
+                </div>
+            </div>
+            
+            <!-- Cola del avión -->
+            <div class="cola">
+                <img src="img/colaAvion.jpg" alt="Cola del avión" class="avion-img">
+            </div>
+        </div>
     </div>
+    
+    <!-- Leyenda -->
+    <div class="leyenda">
+        <div class="leyenda-item">
+            <img src="img/asientoVerde.svg" alt="Asiento disponible" class="leyenda-img">
+            <span>Disponible</span>
+        </div>
+        <div class="leyenda-item">
+            <img src="img/asientoAmarillo.svg" alt="Asiento seleccionado" class="leyenda-img">
+            <span>Seleccionado</span>
+        </div>
+        <div class="leyenda-item">
+            <img src="img/asientoRojo.svg" alt="Asiento ocupado" class="leyenda-img">
+            <span>Ocupado</span>
+        </div>
+    </div>
+
+    <!-- Enlace al script dentro de la carpeta js, al final del body -->
     <script src="js/funciones.js"></script>
 </body>
 </html>
